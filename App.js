@@ -3,9 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const name = 'nayoung'
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>my name is {name}</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    fontSize: 20
+  }
 });
