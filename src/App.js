@@ -10,9 +10,11 @@ const App = () => {
             alignItems : 'center',
             justifyContent : 'center',
         }}>
-          <Text style={{ fontSize: 30, marginBottom: 10}}>Button Component</Text>
+          <Text style={{ fontSize: 30, marginBottom: 10}}>Props</Text>
           {/* <Button title="Button" onPress={()=>alert('clicked')}></Button> */}
-          <MyButton></MyButton>
+          <MyButton title="Button!!" onPress={()=> alert('props')}></MyButton>
+          <MyButton title="Button" onPress={()=> alert('children')}>Childern Props</MyButton>
+          <MyButton onPress={()=> alert('default')}/>
         </View>
     )
 }
