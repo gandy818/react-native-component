@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native'
 import MyButton from './components/MyButton'
+import Counter from './components/Counter'
 
 const App = () => {
     return (
@@ -10,11 +11,12 @@ const App = () => {
             alignItems : 'center',
             justifyContent : 'center',
         }}>
-          <Text style={{ fontSize: 30, marginBottom: 10}}>Props</Text>
+          {/* <Text style={{ fontSize: 30, marginBottom: 10}}>Props</Text> */}
           {/* <Button title="Button" onPress={()=>alert('clicked')}></Button> */}
-          <MyButton title="Button!!" onPress={()=> alert('props')}></MyButton>
+          {/* <MyButton title="Button!!" onPress={()=> alert('props')}></MyButton>
           <MyButton title="Button" onPress={()=> alert('children')}>Childern Props</MyButton>
-          <MyButton onPress={()=> alert('default')}/>
+          <MyButton onPress={()=> alert('default')}/> */}
+          <Counter></Counter>
         </View>
     )
 }
