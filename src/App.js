@@ -1,24 +1,31 @@
-import React from 'react';
-import {View, Text, Button} from 'react-native'
-import MyButton from './components/MyButton'
-import Counter from './components/Counter'
-import EventButton from './components/EventButton'
+import React from "react";
+import {View, Text, Pressable} from 'react-native'
+
+const Button = (props) => {
+    return (
+        <Pressable
+            style={{padding : 10, backgroundColor: '#1abc9c'}}
+            onPressIn={()=>console.log('press in')}
+            onPressOut={()=>console.log('press out')}
+            onPress={()=>console.log('press')}
+            onLongPress={()=>console.log('long press')}
+            delayLongPress={3000}
+            pressRetentionOffset={{bottom:50, left: 50, right: 50, top: 50}}
+            hitSlop={50}>
+            <Text style={{padding: 10, fontSize: 30}}>{props.title}</Text>
+        </Pressable>
+    )
+}
 
 const App = () => {
     return (
         <View style={{
-            flex : 1,
-            backgroundColor : 'skyblue',
-            alignItems : 'center',
-            justifyContent : 'center',
+            flex: 1,
+            justifyContent: 'center',
+            backgroundColor: '#fff',
+            alignItems: 'center'
         }}>
-          {/* <Text style={{ fontSize: 30, marginBottom: 10}}>Props</Text> */}
-          {/* <Button title="Button" onPress={()=>alert('clicked')}></Button> */}
-          {/* <MyButton title="Button!!" onPress={()=> alert('props')}></MyButton>
-          <MyButton title="Button" onPress={()=> alert('children')}>Childern Props</MyButton>
-          <MyButton onPress={()=> alert('default')}/> */}
-          {/* <Counter></Counter> */}
-          <EventButton></EventButton>
+            <Button title='pressable'/>
         </View>
     )
 }

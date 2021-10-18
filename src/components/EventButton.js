@@ -19,7 +19,7 @@ const EventButton = () => {
         onLongPress={_OnLongPress}
         onPressOut={_onPressOut}
         onPress={_onPress}
-        delayLongPress={8000}
+        delayLongPress={3000}
         >
             <Text style={{color: 'white', fontSize: 24}}>Press</Text>
         </TouchableOpacity>
